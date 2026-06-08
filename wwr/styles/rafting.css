@@ -168,139 +168,6 @@ figcaption {
 }
 
 /* ===========================
-   CONTACT PAGE LAYOUT
-=========================== */
-.contact-main {
-    width: 840px;
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
-.contact-main h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: start;
-    margin-bottom: 2rem;
-    padding: 16px;
-}
-
-.contact-left h2,
-.contact-right h2 {
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-.contact-left p {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-
-.map-box {
-    margin-top: 1rem;
-}
-
-.map-box iframe {
-    width: 100%;
-    height: 320px;
-    border: 0;
-    border-radius: 6px;
-}
-
-.contact-right form {
-    display: grid;
-    gap: 0.75rem;
-}
-
-.contact-right input,
-.contact-right textarea {
-    width: 100%;
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contact-right fieldset {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 6px;
-    display: grid;
-    gap: 0.5rem;
-}
-
-.contact-right legend {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.contact-right fieldset label,
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.contact-right fieldset input,
-.checkbox input {
-    width: auto;
-}
-
-.contact-right button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.contact-right button:hover {
-    background-color: var(--accent1-color);
-}
-
-/* ===========================
-   EMPLOYEE SECTION
-=========================== */
-.employee-section {
-    padding: 16px;
-    margin-bottom: 2rem;
-}
-
-.employee-section h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    text-align: center;
-}
-
-.employee-grid figure {
-    margin: 0;
-}
-
-.employee-grid img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-.employee-grid figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* ===========================
    FOOTER
 =========================== */
 footer {
@@ -330,31 +197,95 @@ footer img {
 }
 
 /* ===========================
-   RESPONSIVE
+   CONTACT PAGE LAYOUT
 =========================== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* GRID: LEFT INFO + RIGHT FORM */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* LEFT SIDE */
+.contact-left h2 {
+    margin-bottom: 1rem;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 6px;
+}
+
+/* RIGHT SIDE FORM */
+.contact-right form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-right input,
+.contact-right textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-right fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.contact-right legend {
+    font-weight: bold;
+}
+
+.contact-right button {
+    background-color: #0a3d62;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background-color: #3c6382;
+}
+
+/* EMPLOYEE GRID */
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.employee-grid img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.employee-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
 @media (max-width: 700px) {
-
-    header,
-    main,
-    footer,
-    .contact-main {
-        width: 95%;
-    }
-
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    header nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .employee-grid {
