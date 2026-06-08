@@ -28,73 +28,64 @@
         <!-- CONTACT INFO + MAP + FORM -->
         <section class="contact-layout">
 
-            <!-- TOP CENTER COMPANY INFO -->
-            <div class="contact-info">
+            <!-- LEFT SIDE: COMPANY INFO + MAP -->
+            <div class="contact-left">
                 <h2>White Water Rafting Company</h2>
                 <p>123 Main River Street<br>Kolob, California</p>
                 <p>+1 999 999 9999</p>
                 <p>info@whitewater.com</p>
-            </div>
 
-            <!-- MAP LEFT + FORM RIGHT -->
-            <div class="contact-content">
                 <div class="map-box">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627974202137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE0LjQiRQ!5e0!3m2!1sen!2sus!4v0000000000"
                       allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
+            </div>
 
-                <div class="contact-right">
-                    <form>
-                        <div class="form-row">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Placeholder"
+            <!-- RIGHT SIDE: FORM -->
+            <div class="contact-right">
+                <h2>Get in Touch!</h2>
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <fieldset>
+                        <legend>Message Purpose</legend>
+
+                        <label for="purpose-general">
+                            <input type="radio" id="purpose-general" name="purpose" value="general"
                               required>
-                        </div>
-
-                        <div class="form-row">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Placeholder"
-                              required>
-                        </div>
-
-                        <fieldset>
-                            <legend>Message Purpose</legend>
-
-                            <label for="purpose-general">
-                                <input type="radio" id="purpose-general" name="purpose"
-                                  value="general" required>
-                                General Inquiry
-                            </label>
-
-                            <label for="purpose-reservation">
-                                <input type="radio" id="purpose-reservation" name="purpose"
-                                  value="reservation">
-                                Reservation Question
-                            </label>
-
-                            <label for="purpose-suggestion">
-                                <input type="radio" id="purpose-suggestion" name="purpose"
-                                  value="suggestion">
-                                Website Suggestion
-                            </label>
-                        </fieldset>
-
-                        <div class="form-row message-row">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Type here"
-                              required></textarea>
-                        </div>
-
-                        <label class="checkbox">
-                            <input type="checkbox" id="subscribe" name="subscribe">
-                            Please subscribe me to the monthly newsletter
+                            General Inquiry
                         </label>
 
-                        <button type="submit">Get in Touch!</button>
-                    </form>
-                </div>
+                        <label for="purpose-reservation">
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="reservation">
+                            Reservation Question
+                        </label>
+
+                        <label for="purpose-suggestion">
+                            <input type="radio" id="purpose-suggestion" name="purpose"
+                              value="suggestion">
+                            Website Suggestion
+                        </label>
+                    </fieldset>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label class="checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        Please subscribe me to the monthly newsletter
+                    </label>
+
+                    <button type="submit">Get in Touch!</button>
+                </form>
             </div>
         </section>
 
