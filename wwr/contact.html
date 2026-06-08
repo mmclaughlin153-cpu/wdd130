@@ -18,23 +18,23 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <main>
-        <h1>Contact Us</h1>
+    <main class="contact-main">
 
-        <!-- CONTACT INFO + MAP + FORM -->
+        <section class="contact-intro">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street</p>
+            <p>Kolob, California</p>
+            <p>+1 999 999 9999</p>
+            <p>info@whitewater.com</p>
+        </section>
+
         <section class="contact-layout">
 
-            <!-- LEFT SIDE: COMPANY INFO + MAP -->
             <div class="contact-left">
-                <h2>White Water Rafting Company</h2>
-                <p>123 Main River Street<br>Kolob, California</p>
-                <p>+1 999 999 9999</p>
-                <p>info@whitewater.com</p>
-
                 <div class="map-box">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627974202137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE0LjQiRQ!5e0!3m2!1sen!2sus!4v0000000000"
@@ -43,33 +43,35 @@
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: FORM -->
             <div class="contact-right">
-                <h2>Get in Touch!</h2>
-
                 <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <div class="form-item">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                    </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Placeholder"
+                          required>
+                    </div>
 
                     <fieldset>
                         <legend>Message Purpose</legend>
 
-                        <label for="purpose-general">
+                        <label class="radio-item" for="purpose-general">
                             <input type="radio" id="purpose-general" name="purpose" value="general"
                               required>
                             General Inquiry
                         </label>
 
-                        <label for="purpose-reservation">
+                        <label class="radio-item" for="purpose-reservation">
                             <input type="radio" id="purpose-reservation" name="purpose"
                               value="reservation">
                             Reservation Question
                         </label>
 
-                        <label for="purpose-suggestion">
+                        <label class="radio-item" for="purpose-suggestion">
                             <input type="radio" id="purpose-suggestion" name="purpose"
                               value="suggestion">
                             Website Suggestion
@@ -77,9 +79,10 @@
                     </fieldset>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" placeholder="Type here"
+                      required></textarea>
 
-                    <label class="checkbox">
+                    <label class="checkbox-item" for="subscribe">
                         <input type="checkbox" id="subscribe" name="subscribe">
                         Please subscribe me to the monthly newsletter
                     </label>
@@ -89,24 +92,23 @@
             </div>
         </section>
 
-        <!-- EMPLOYEE PROFILES -->
-        <section class="employees">
+        <section class="employee-section">
             <h2>We Are Here to Serve You</h2>
 
             <div class="employee-grid">
                 <figure>
                     <img src="images/employee1.jpg" alt="Guide Sarah">
-                    <figcaption>Sarah – Lead River Guide</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/employee2.jpg" alt="Guide Mark">
-                    <figcaption>Mark – Safety Coordinator</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/employee3.jpg" alt="Guide Emily">
-                    <figcaption>Emily – Guest Services Manager</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
             </div>
         </section>
