@@ -200,10 +200,122 @@ footer img {
    CONTACT PAGE LAYOUT
 =========================== */
 
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
+main > h1 {
+    text-align: center;
+    margin: 20px 0 8px;
+}
+
+.contact-layout {
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+/* Company info centered at the top */
+.contact-info {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.contact-info h2 {
+    margin-bottom: 6px;
+}
+
+.contact-info p {
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Map left, form right */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+}
+
+/* Contact form layout */
+.contact-right form {
+    display: grid;
+    gap: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-row label {
+    font-weight: bold;
+}
+
+.contact-right input,
+.contact-right textarea {
+    padding: 0.5rem;
+    border: 1px solid #777;
+    font-size: 1rem;
+}
+
+.contact-right fieldset {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 8px 10px;
+    border: none;
+    padding: 0;
+}
+
+.contact-right legend {
+    grid-column: 1;
+    font-weight: bold;
+}
+
+.contact-right fieldset label {
+    grid-column: 2;
+}
+
+.message-row {
+    align-items: start;
+}
+
+.checkbox {
+    font-size: 0.9rem;
+}
+
+.contact-right button {
+    padding: 0.6rem;
+    border: 1px solid #777;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background-color: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-right fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-right fieldset label {
+        grid-column: 1;
+    }
 }
 
 /* GRID: LEFT INFO + RIGHT FORM */
