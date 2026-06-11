@@ -3,7 +3,11 @@
 =========================== */
 :root {
     --primary-color: #0a3d62;
+    --secondary-color: #f4f8fb;
     --accent1-color: #3c6382;
+    --accent2-color: #f6b93b;
+    --dark-color: #1f2d36;
+    --light-color: #ffffff;
     --heading-font: "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -22,31 +26,54 @@
 =========================== */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: #fff;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.5;
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    width: 960px;
+    max-width: 95%;
     margin: 0 auto;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-section {
-    margin: 24px 0;
-    padding: 16px;
+img {
+    max-width: 100%;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 16px;
+section {
+    margin: 28px 0;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.button-link,
+button {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 0.85rem 1.2rem;
+    cursor: pointer;
+}
+
+.button-link:hover,
+button:hover {
+    background-color: #e59f18;
 }
 
 /* ===========================
@@ -68,11 +95,12 @@ header img {
 header nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 20px;
 }
 
 header nav a {
-    color: #fff;
+    color: var(--light-color);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
@@ -88,6 +116,8 @@ header nav a:hover {
 =========================== */
 .hero {
     position: relative;
+    margin-top: 0;
+    overflow: hidden;
 }
 
 .hero img {
@@ -102,9 +132,22 @@ header nav a:hover {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.9;
-    background-color: var(--accent1-color);
-    color: #fff;
+    background-color: rgba(10, 61, 98, 0.88);
+    color: var(--light-color);
+}
+
+.hero-message {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    max-width: 390px;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hero-message p {
+    margin-bottom: 1rem;
 }
 
 .hero article {
@@ -121,6 +164,163 @@ header nav a:hover {
     float: right;
     width: 125px;
     margin-left: 12px;
+}
+
+/* ===========================
+   HOME PAGE
+=========================== */
+.home-welcome {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.home-welcome > div,
+.newsletter-form,
+.home-cta,
+.purpose-card,
+.trip-cta,
+.trip-card,
+.equipment-section,
+.trip-table-section {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-form {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.newsletter-form input,
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #c8d6df;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.home-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.home-cta h2,
+.home-cta p {
+    color: var(--light-color);
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.purpose-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.purpose-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ===========================
+   TRIPS PAGE
+=========================== */
+.trip-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.trip-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.trip-card ul {
+    margin: 1rem 0 0 1.2rem;
+}
+
+.equipment-section h2,
+.trip-table-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.equipment-grid article {
+    background-color: var(--light-color);
+    border-left: 5px solid var(--accent2-color);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.trip-table-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--light-color);
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 0.7rem;
+    font-size: 0.9rem;
+    color: var(--accent1-color);
+}
+
+th,
+td {
+    border: 1px solid #b9c9d4;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+tbody th {
+    color: var(--primary-color);
 }
 
 /* ===========================
@@ -168,6 +368,108 @@ figcaption {
 }
 
 /* ===========================
+   CONTACT PAGE LAYOUT
+=========================== */
+.company-info {
+    text-align: center;
+    margin: 20px 0 18px;
+    padding: 0;
+}
+
+.company-info h1 {
+    margin-bottom: 6px;
+    font-size: 1.7rem;
+}
+
+.company-info p {
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 2px 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: stretch;
+}
+
+.contact-left {
+    display: flex;
+    text-align: left;
+}
+
+.contact-left h2,
+.contact-left p,
+.contact-right h2 {
+    display: none;
+}
+
+.map-box {
+    flex: 1;
+}
+
+.map-box,
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.map-box iframe {
+    min-height: 360px;
+    border: 0;
+    border-radius: 6px;
+}
+
+.contact-right form {
+    display: grid;
+    gap: 1rem;
+    height: 100%;
+}
+
+.contact-right fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.contact-right legend {
+    font-weight: bold;
+}
+
+.contact-right button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background-color: var(--accent1-color);
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.employee-grid img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.employee-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* ===========================
    FOOTER
 =========================== */
 footer {
@@ -197,151 +499,72 @@ footer img {
 }
 
 /* ===========================
-   CONTACT PAGE LAYOUT
-=========================== */
-
-/* Hide the extra Contact Us heading if it is still in the HTML */
-main > h1 {
-    display: none;
-}
-
-/* Company info centered below the header */
-.company-info {
-    text-align: center;
-    margin: 20px 0 18px;
-    padding: 0;
-}
-
-.company-info h1 {
-    margin-bottom: 6px;
-    font-size: 1.7rem;
-}
-
-.company-info p {
-    font-weight: bold;
-    line-height: 1.4;
-    margin: 2px 0;
-}
-
-/* Map left + form right */
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: stretch;
-}
-
-/* LEFT SIDE MAP */
-.contact-left {
-    display: flex;
-    text-align: left;
-}
-
-.contact-left h2,
-.contact-left p {
-    display: none;
-}
-
-.map-box {
-    flex: 1;
-}
-
-.map-box,
-.map-box iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.map-box iframe {
-    min-height: 360px;
-    border: 0;
-    border-radius: 6px;
-}
-
-/* RIGHT SIDE FORM */
-.contact-right h2 {
-    display: none;
-}
-
-.contact-right form {
-    display: grid;
-    gap: 1rem;
-    height: 100%;
-}
-
-.contact-right input,
-.contact-right textarea {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contact-right fieldset {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 6px;
-}
-
-.contact-right legend {
-    font-weight: bold;
-}
-
-.contact-right button {
-    background-color: #0a3d62;
-    color: white;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.contact-right button:hover {
-    background-color: #3c6382;
-}
-
-/* ===========================
-   EMPLOYEE GRID
-=========================== */
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    text-align: center;
-}
-
-.employee-grid img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-.employee-grid figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
-
-/* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
 
-    header,
-    main,
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
     footer {
-        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
     }
 
-    .contact-layout {
+    .hero h1 {
+        position: static;
+        background-color: var(--primary-color);
+    }
+
+    .hero-message {
+        position: static;
+        max-width: none;
+        border-radius: 0;
+    }
+
+    .home-welcome,
+    .home-cta,
+    .purpose-grid,
+    .trip-cta,
+    .trip-grid,
+    .equipment-grid,
+    .contact-layout,
+    .employee-grid,
+    .history-content {
         grid-template-columns: 1fr;
     }
 
-    .map-box iframe {
-        min-height: 300px;
+    .home-cta,
+    .trip-cta {
+        text-align: center;
     }
 
-    .employee-grid {
-        grid-template-columns: 1fr;
+    .adventure-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .adventure-gallery figure {
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    .adventure-gallery figure {
+        width: 100%;
     }
 }

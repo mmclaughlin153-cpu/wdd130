@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Welcome to our white water rafting adventures. Explore trips, history, and contact information.">
+    <meta name="description" content="Splash White Water Rafting offers exciting guided rafting trips, beautiful river adventures, and safe outdoor experiences for every skill level.">
     <meta name="author" content="Michael McLaughlin">
-    <title>Rafting Home</title>
+    <title>Home | Splash White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rafting Site Logo">
+        <img src="images/logo.png" alt="Splash White Water Rafting logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -23,19 +22,84 @@
     </header>
 
     <main>
-        <h1>Welcome to Splash White Water Rafting! </h1>
-        <p>
-            Experience thrilling rapids, breathtaking scenery, and unforgettable adventures.
-            Whether you're a beginner or a seasoned rafter, we have the perfect trip for you.
-        </p>
+        <section class="hero home-hero">
+            <img src="images/hero.jpg" alt="A rafting group paddling through white water rapids">
+            <h1>Splash White Water Rafting</h1>
+            <div class="hero-message">
+                <p>Challenge the rapids, enjoy the canyon views, and make memories on the river.</p>
+                <a class="button-link" href="trips.html">Plan Your Trip</a>
+            </div>
+        </section>
+
+        <section class="home-welcome">
+            <div>
+                <h2>Adventure for Every Rafter</h2>
+                <p>
+                    Whether this is your first time on the river or your next big whitewater challenge,
+                    our trained guides help you choose the right route, learn the basics, and enjoy a safe
+                    adventure from launch to takeout.
+                </p>
+                <p>
+                    Splash White Water Rafting provides guided river trips, reliable equipment, and exciting
+                    outdoor experiences for families, friends, youth groups, and experienced paddlers.
+                </p>
+            </div>
+
+            <form class="newsletter-form" method="get" action="#">
+                <h2>Join Our Newsletter</h2>
+                <p>Get trip updates, seasonal deals, and rafting tips.</p>
+
+                <label for="newsletter-name">Name</label>
+                <input type="text" id="newsletter-name" name="name" required>
+
+                <label for="newsletter-email">Email</label>
+                <input type="email" id="newsletter-email" name="email" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <section class="home-cta">
+            <div>
+                <h2>Find the River That Fits You</h2>
+                <p>
+                    Compare family floats, canyon runs, and advanced whitewater routes on our trips page.
+                </p>
+            </div>
+            <a class="button-link" href="trips.html">View All Trips</a>
+        </section>
+
+        <section class="purpose-grid">
+            <article class="purpose-card">
+                <img src="images/rafting1.jpg" alt="Rafters floating through a scenic river canyon">
+                <div>
+                    <h2>Our Purpose</h2>
+                    <p>
+                        We help guests connect with nature, build confidence, and experience the power of teamwork
+                        on the river. Every trip is guided with safety, learning, and adventure in mind.
+                    </p>
+                </div>
+            </article>
+
+            <article class="purpose-card">
+                <img src="images/rafting2.jpg" alt="A rafting guide giving paddling instructions before a trip">
+                <div>
+                    <h2>What We Offer</h2>
+                    <p>
+                        Choose from beginner, intermediate, and advanced trips. We provide professional guides,
+                        rafts, paddles, helmets, life jackets, safety instruction, and routes for different skill levels.
+                    </p>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Splash White Water Rafting | Michael McLaughlin</p>
-        <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <nav class="socialmedia" aria-label="Social media links">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
         </nav>
     </footer>
 </body>
