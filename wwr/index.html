@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Welcome to our white water rafting adventures. Explore trips, history, and contact information.">
+      content="Splash White Water Rafting offers exciting river adventures, guided trips, and outdoor memories for families, groups, and thrill seekers.">
     <meta name="author" content="Michael McLaughlin">
-    <title>Rafting Home</title>
+    <title>Home | Splash White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rafting Site Logo">
+        <img src="images/logo.png" alt="Splash White Water Rafting Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -23,19 +23,78 @@
     </header>
 
     <main>
-        <h1>Welcome to Splash White Water Rafting! </h1>
-        <p>
-            Experience thrilling rapids, breathtaking scenery, and unforgettable adventures.
-            Whether you're a beginner or a seasoned rafter, we have the perfect trip for you.
-        </p>
+        <section class="hero home-hero">
+            <img src="images/hero.jpg" alt="White water rafting group on a river">
+            <h1>Adventure Awaits on the River</h1>
+        </section>
+
+        <section class="home-intro">
+            <div>
+                <h2>Experience the Rush of White Water Rafting</h2>
+                <p>
+                    Splash White Water Rafting helps guests discover the beauty, excitement, and
+                    teamwork of river adventures.
+                    Whether you are new to rafting or ready for a bigger challenge, our trained
+                    guides help make every trip safe,
+                    memorable, and fun.
+                </p>
+                <a class="button-link" href="trips.html">Explore Our Trips</a>
+            </div>
+
+            <form class="newsletter">
+                <fieldset>
+                    <legend>Sign Up for River Updates</legend>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button type="submit">Join Newsletter</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="home-grid">
+            <article>
+                <img src="images/rafting-family.jpg" alt="Family enjoying a rafting trip">
+                <div>
+                    <h2>Trips for Every Group</h2>
+                    <p>
+                        Our river trips are designed for families, youth groups, friends, and
+                        outdoor explorers. We offer calm scenic
+                        floats, exciting beginner rapids, and advanced white water experiences.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <img src="images/rafting-guide.jpg" alt="Rafting guide helping guests prepare">
+                <div>
+                    <h2>Guided by Experience</h2>
+                    <p>
+                        Our guides know the river and care about your experience. We provide
+                        equipment, instruction, and support so
+                        guests can focus on the adventure and enjoy the journey.
+                    </p>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Splash White Water Rafting | Michael McLaughlin</p>
-        <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://youtube.com">
+                <img src="images/youtube.svg" alt="YouTube">
+            </a>
         </nav>
     </footer>
 </body>

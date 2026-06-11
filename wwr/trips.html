@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our white water rafting trips for all skill levels.">
+    <meta name="description"
+      content="View available rafting trips from Splash White Water Rafting, including beginner, family, and advanced river adventures.">
     <meta name="author" content="Michael McLaughlin">
-    <title>Rafting Trips</title>
+    <title>Trips | Splash White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Rafting Site Logo">
+        <img src="images/logo.png" alt="Splash White Water Rafting Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -22,36 +23,117 @@
     </header>
 
     <main>
-        <h1>Our Rafting Trips</h1>
-
-        <section>
-            <h2>Beginner Rapids</h2>
-            <p>
-                Perfect for families and first‑timers. Enjoy gentle rapids and beautiful scenery.
-            </p>
+        <section class="hero trips-hero">
+            <img src="images/trips-hero.jpg" alt="Rafting group paddling through rapids">
+            <h1>Choose Your Next River Adventure</h1>
         </section>
 
-        <section>
-            <h2>Intermediate Adventure</h2>
-            <p>
-                A balanced mix of excitement and challenge. Great for adventurous beginners.
-            </p>
+        <section class="trips-cta">
+            <div>
+                <h2>Ready to Plan Your Trip?</h2>
+                <p>
+                    Contact us today to ask questions, reserve your spot, or find the best rafting
+                    trip for your group.
+                </p>
+            </div>
+            <a class="button-link" href="contact.html">Contact Us</a>
         </section>
 
-        <section>
-            <h2>Expert Whitewater</h2>
-            <p>
-                High‑intensity rapids for experienced rafters seeking maximum adrenaline.
-            </p>
+        <section class="trip-cards">
+            <article>
+                <img src="images/scenic-float.jpg" alt="Guests on a calm scenic river float">
+                <h2>Scenic Family Float</h2>
+                <p>
+                    This relaxing trip is perfect for families, first-time rafters, and visitors who
+                    want to enjoy mountain views,
+                    wildlife, and calm sections of the river. Guides provide basic instruction and
+                    help guests feel comfortable on
+                    the water.
+                </p>
+            </article>
+
+            <article>
+                <img src="images/canyon-rapids.jpg" alt="Raft going through canyon rapids">
+                <h2>Canyon Rapids Run</h2>
+                <p>
+                    Our most popular adventure combines beautiful canyon scenery with exciting
+                    beginner and intermediate rapids.
+                    This trip is a great choice for groups who want a mix of fun, challenge, and
+                    time to enjoy the river.
+                </p>
+            </article>
+
+            <article>
+                <img src="images/extreme-rapids.jpg"
+                  alt="Advanced rafting trip through white water rapids">
+                <h2>Thunder Gorge Challenge</h2>
+                <p>
+                    This high-energy trip is designed for adventurous guests who are ready for
+                    stronger rapids and a faster pace.
+                    Guides review safety procedures before the trip and lead the group through an
+                    unforgettable white water route.
+                </p>
+            </article>
+        </section>
+
+        <section class="trip-table-section">
+            <h2>Available Trips</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Trip</th>
+                        <th scope="col">Difficulty</th>
+                        <th scope="col">Length</th>
+                        <th scope="col">Best For</th>
+                        <th scope="col">Starting Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scenic Family Float</td>
+                        <td>Easy</td>
+                        <td>2 Hours</td>
+                        <td>Families and beginners</td>
+                        <td>$45</td>
+                    </tr>
+                    <tr>
+                        <td>Canyon Rapids Run</td>
+                        <td>Moderate</td>
+                        <td>Half Day</td>
+                        <td>Groups and first-time adventurers</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td>Thunder Gorge Challenge</td>
+                        <td>Advanced</td>
+                        <td>Full Day</td>
+                        <td>Experienced rafters</td>
+                        <td>$125</td>
+                    </tr>
+                    <tr>
+                        <td>Sunset River Ride</td>
+                        <td>Easy</td>
+                        <td>3 Hours</td>
+                        <td>Couples, families, and photographers</td>
+                        <td>$60</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Splash White Water Rafting | Michael McLaughlin</p>
-        <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://youtube.com">
+                <img src="images/youtube.svg" alt="YouTube">
+            </a>
         </nav>
     </footer>
 </body>
