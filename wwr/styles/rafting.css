@@ -568,3 +568,21 @@ footer img {
         width: 100%;
     }
 }
+
+/* ===========================
+   CONTACT FORM RADIO/CHECKBOX FIX
+   Keeps Purpose radio buttons and newsletter checkbox aligned.
+=========================== */
+.contact-right input[type="radio"],
+.contact-right input[type="checkbox"] {
+    width: auto;
+    margin: 0 0.5rem 0 0;
+    vertical-align: middle;
+}
+
+.contact-right fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.45rem 1rem 0.45rem 0;
+}
